@@ -63,12 +63,15 @@ class Mobilizacao():
             return False
         
         if not self.buscarBotao(self.imagemProcurarPath, tempoEspera=1):
+            t.sleep(0.5)
+            pyautogui.press('esc')
             return False
         
         if not self.buscarBotao(self.imagemMobilizacaoPath):
             return False
         
         if not self.buscarBotao(self.imagemComecarPath):
+            t.sleep(0.5)
             pyautogui.press('esc')
             return False
 
