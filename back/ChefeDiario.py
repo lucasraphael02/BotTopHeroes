@@ -75,8 +75,14 @@ class ChefeDiario():
         if not self.buscarBotao(imagemFila, 1):
             return False
         
+        counterTimer = 0
         while not self.buscarBotao(imagemBotaoComecar, 5):
             t.sleep(0.1)
+            counterTimer+=1
+            if (counterTimer >= 600):
+                t.sleep(0.5)
+                pyautogui.press('esc')
+                return False
 
         return True
     
@@ -115,6 +121,7 @@ class ChefeDiario():
             resultado = self.chefeDiarioExecucao(listaChefes, imagemBotaoAtaque, imagemBotaoComecar, imagemFila)
             if resultado:
                 i+=1
+                print(f"Ataque {i} realizado")
 
         
     

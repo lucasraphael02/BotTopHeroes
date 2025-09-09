@@ -14,7 +14,7 @@ class PegarMitica():
         self.pegarMiticas()
 
 
-    def buscarImagem(self, imagemPath, confidence = 0.9):
+    def buscarImagem(self, imagemPath, confidence = 1):
         return self.findImage.find_image_on_screen(imagemPath, confidence)
     
     def clicarNaImagem(self, posicao, tempoEspera: float):

@@ -53,9 +53,6 @@ if __name__ == "__main__":
                 # break
             case 5:
                 PegarMitica()
-            case 6:
-                t.sleep(5)
-                pyautogui.press('esc')
             case 0:
                 condicao = False
                 # break
